@@ -156,7 +156,6 @@ public class ResourceCentreTest {
         assertEquals("Test that the display is correct.", testOutput, allChromebook);
 
  
-
         //Test Case 3
         cb3.setIsAvailable(false);
         ResourceCentre.addChromebook(chromebookList, cb3);
