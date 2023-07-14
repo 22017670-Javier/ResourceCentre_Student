@@ -140,8 +140,6 @@ public class ResourceCentreTest {
         // Test if the output is empty
         assertEquals("Test that nothing is displayed", testOutput, allChromebook);
 
- 
-
         //Test Case 2
         ResourceCentre.addChromebook(chromebookList, cb1);
         ResourceCentre.addChromebook(chromebookList, cb2);
@@ -154,7 +152,6 @@ public class ResourceCentreTest {
         // Test that the details are displayed correctly
         assertEquals("Test that the display is correct.", testOutput, allChromebook);
 
- 
         //Test Case 3
         cb3.setIsAvailable(false);
         ResourceCentre.addChromebook(chromebookList, cb3);
@@ -209,8 +206,6 @@ public class ResourceCentreTest {
         assertFalse(chromebookList.get(0).getIsAvailable());
         assertEquals(chromebookList.get(0).getDueDate(),"8-8-2020");
 
-
-
         // Test Case 2 - Loan an unavailable item
         cb2.setIsAvailable(false);
         ResourceCentre.addChromebook(chromebookList, cb2);
@@ -218,13 +213,9 @@ public class ResourceCentreTest {
         ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "" );
         assertFalse("Test that the loan fails.", ok);    
 
-
-
         // Test Case 3 - Item not found
         ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0016", "");
         assertFalse("Test that the loan fails.", ok);
-
-
 
         // Test case 4 - Missing details
         ResourceCentre.addChromebook(chromebookList, cb3);
